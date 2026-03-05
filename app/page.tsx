@@ -117,10 +117,28 @@ export default function Home() {
               PORTOFOLIO <br /> PROJECT <br />
         </h1>
 
-        <div className="grid md:grid-cols-2 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 max-w-6xl mx-auto">
           {projects.map((project, i) => (
             <ProjectCard key={i} {...project} />
           ))}
+          {/* KARTU "9+" / MORE PROJECTS */}
+            <div className="group relative p-4 flex flex-col items-center justify-center border-2 border-dashed border-gray-200 hover:border-orange-500 hover:bg-orange-50 transition-all duration-300 min-h-[300px]">
+              <div className="text-6xl font-black text-gray-200 group-hover:text-orange-500 transition-colors">
+                9+
+              </div>
+              <p className="mt-4 text-sm font-bold uppercase tracking-widest text-gray-400 group-hover:text-orange-600">
+                More Projects
+              </p>
+              
+              {/* Optional: Tambahkan link ke GitHub atau Behance */}
+              <a 
+                href="https://github.com/fzbayu" 
+                target="_blank"
+                className="mt-6 px-6 py-2 bg-black text-white text-[10px] font-bold uppercase tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                View All on GitHub
+              </a>
+            </div>
         </div>
       </section>
 
@@ -165,7 +183,8 @@ export default function Home() {
               CERTIFICATE
         </h1>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
+        {/* SERTIFIKAT SECTION */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 max-w-6xl mx-auto">
           {certificate.map((cert, i) => (
             <CertificateCard key={i} {...cert} />
           ))}

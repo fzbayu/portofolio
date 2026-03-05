@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaChevronLeft, FaChevronRight, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaGithub, FaExternalLinkAlt, FaFigma} from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 
 type ProjectData = {
@@ -14,6 +14,7 @@ type ProjectData = {
   images: string[];
   link?: string;
   github?: string;
+  figma?: string;
 };
 
 type Props = {
@@ -163,6 +164,17 @@ export default function ProjectModal({ project, onClose }: Props) {
               {project.github && (
                 <a href={project.github} target="_blank" className="p-4 bg-gray-100 hover:bg-gray-200 transition-colors">
                   <FaGithub size={20} />
+                </a>
+              )}
+              {/* TOMBOL FIGMA */}
+              {project.figma && (
+                <a 
+                  href={project.figma} 
+                  target="_blank" 
+                  title="View Design"
+                  className="p-4 bg-[#F24E1E]/10 text-[#F24E1E] hover:bg-[#F24E1E] hover:text-white transition-all duration-300"
+                >
+                  <FaFigma size={20} />
                 </a>
               )}
             </div>

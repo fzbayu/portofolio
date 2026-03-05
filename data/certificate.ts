@@ -1,26 +1,38 @@
 export const certificate = [
   {
-    title: "Website CBT",
-    description:
-      "Pengembangan frontend dengan struktur komponen modular.",
-    image: "/codifyve.jpg",
+    title: "Finalis Web Development SECOMP 2025",
+    issuer: "Himadira Telkom University",
+    date: "Agustus 2025",
+    image: "/certificate/secomp.jpg",
   },
   {
-    title: "Website CBT",
-    description:
-      "Pengembangan frontend dengan struktur komponen modular.",
-      image: "/codifyve.jpg",
+    title: "MTQ AMLI 2025",
+    issuer: "Asosiasi MIPA LPTK Indonesia",
+    date: "Desember 2025",
+    image: "/certificate/mtq.jpg",
   },
   {
-    title: "Website CBT",
-    description:
-      "Pengembangan frontend dengan struktur komponen modular.",
-      image: "/codifyve.jpg",
+    title: "DIMAS-TI UI/UX Competition",
+    issuer: "Asosiasi MIPA LPTK Indonesia",
+    date: "Desember 2025",
+    image: "/certificate/dimasti.png",
   },
   {
-    title: "Website CBT",
-    description:
-      "Pengembangan frontend dengan struktur komponen modular.",
-      image: "/codifyve.jpg",
+    title: "UI/UX Design Class",
+    issuer: "IdSpora",
+    date: "Februari 2025",
+    image: "/certificate/uiux1.png",
   },
+  {
+    title: "Webinar UI/UX Design",
+    issuer: "Special Skill Indonesia",
+    date: "April 2025",
+    image: "/certificate/uiux2.jpg",
+  },
+  {
+    title: "IT Camp 2025 - IMILKOM Mini Bootcamp",
+    issuer: "IMILKOM USU",
+    date: "April 2025",
+    image: "/certificate/bootcamp.png",
+  }
 ];
