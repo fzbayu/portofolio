@@ -6,7 +6,7 @@ export const certificate = [
     image: "/certificate/secomp.jpg",
   },
   {
-    title: "MTQ AMLI 2025",
+    title: "Poster Qur'ani CompetitionMTQ AMLI 2025",
     issuer: "Asosiasi MIPA LPTK Indonesia",
     date: "Desember 2025",
     image: "/certificate/mtq.jpg",
