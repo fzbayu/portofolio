@@ -4,6 +4,7 @@ export const projects = [
   {
     title: "CBT (Computer Based Test) Platform",
     description: "Bakti Formica Untuk Bangsa (BFUB) XXVII merupakan program unggulan tahunan yang diselenggarakan oleh BEM HMBF FPMIPA UPI sebagai wadah untuk mengembangkan potensi serta kompetensi generasi muda Indonesia di bidang sains dan biologi. Dalam proyek ini, saya berperan sebagai UI/UX Designer dan Front-End Developer. Saya bertanggung jawab dalam merancang struktur tampilan dan pengalaman pengguna pada website, mulai dari perancangan layout, alur navigasi, hingga desain antarmuka yang konsisten. Selain itu, saya juga mengimplementasikan desain tersebut ke dalam pengembangan front-end website agar menghasilkan tampilan yang intuitif, responsif, dan mudah diakses oleh pengguna.",
+    categories: ["UI/UX", "Website"],
     tech: ["Next.js", "Tailwind CSS", "Figma"],
     features: [
       "Perancangan UI/UX komprehensif mulai dari wireframing hingga high-fidelity prototype di Figma.",
@@ -24,6 +25,7 @@ export const projects = [
   {
     title: "UI/UX Company Profile Fisiopro Website",
     description: "FisioPro merupakan layanan fisioterapi profesional berbasis kunjungan ke rumah yang menyediakan penanganan untuk pemulihan pasca stroke, rehabilitasi cedera, rehabilitasi pasca operasi, serta perawatan lansia di wilayah Jabodetabek. Dalam proyek ini, saya berperan sebagai UI/UX Designer yang bertanggung jawab merancang tampilan dan pengalaman pengguna pada website company profile FisioPro. Desain difokuskan pada kejelasan informasi, aksesibilitas, serta pengalaman pengguna yang mudah dan nyaman, sehingga memudahkan calon pasien untuk memahami layanan yang tersedia dan mengakses informasi yang dibutuhkan.",
+    categories: ["UI/UX", "Website"],
     tech: ["Figma"],
     features: [
       "Redesain arsitektur informasi untuk mempercepat akses semua layanan",
@@ -47,6 +49,7 @@ export const projects = [
   {
     title: "Lantai Hijau Website",
     description: "LantaiHijau Website dikembangkan untuk kompetisi Secomp 2025 Web Development sebagai platform perencanaan dan pemantauan pertanian dalam ruangan. Proyek ini dikerjakan bersama Faiz Bayu Erlangga, Abdurrahman Rauf Budiman, dan Marco Henrik Abineno. Saya berperan sebagai UI/UX Designer dan Front-End Developer, dengan fokus merancang pengalaman pengguna yang intuitif serta membangun antarmuka yang interaktif dan responsif. Platform ini membantu pengguna mengelola kebun indoor melalui fitur tata letak kebun berbasis grid, panduan perawatan tanaman, pengingat aktivitas, dan jurnal pertumbuhan tanaman.",
+    categories: ["UI/UX", "Website"],
     tech: ["Next.js", "Tailwind CSS", "Laravel API", "Figma"],
     features: [
       "Perancangan UI/UX intuitif untuk manajemen kebun mandiri di ruang terbatas masyarakat urban.",
@@ -72,6 +75,7 @@ export const projects = [
   {
     title: "UI/UX Detik Bahagia Website",
     description: "DetikBahagia Website merupakan platform kuesioner interaktif berbasis web yang mengajak pengguna untuk menjawab berbagai pertanyaan mengenai kebiasaan dan pola mereka dalam menonton film. Platform ini dirancang untuk memberikan pengalaman interaktif yang membantu pengguna merefleksikan preferensi serta karakteristik mereka dalam menikmati film. Dalam proyek ini, saya berperan sebagai UI/UX Designer yang bertanggung jawab merancang alur pengalaman pengguna serta tampilan antarmuka agar proses pengisian kuesioner berjalan jelas, intuitif, dan mudah dipahami. Fokus desain diarahkan pada penyusunan struktur pertanyaan, navigasi yang sederhana, serta tampilan yang nyaman digunakan sehingga pengguna dapat mengikuti seluruh proses hingga melihat hasilnya dengan mudah.",
+    categories: ["UI/UX", "Website"],
     tech: ["Figma"],
     features: [
       "Perancangan alur kuesioner interaktif yang memandu pengguna secara intuitif tanpa beban kognitif berlebih.",
@@ -86,13 +90,14 @@ export const projects = [
       "/project/detikbahagia/2.png",
       "/project/detikbahagia/3.png",
       "/project/detikbahagia/4.png",
-      "/project/detikbahagia/5.png"
+      "/project/detikbahagia/5.jpg"
     ],
     figma: "https://www.figma.com/proto/mjgdon4SlSXb2LbSYKs5R3/DetikBahagia?node-id=9-150&t=lClFsWs5wJweNF5n-1"
   },
   {
     title: "UI/UX Phyfest Website CBT (Computer Based Test) Platform",
     description: "Physics Festival UPI (Phyfest) merupakan acara tahunan yang diselenggarakan oleh Himpunan Mahasiswa Fisika FPMIPA UPI dengan tujuan mendorong semangat kompetisi, kreativitas, serta minat terhadap bidang fisika di kalangan siswa SMP, SMA, hingga mahasiswa. Dalam proyek ini, saya berperan sebagai UI/UX Designer yang bertanggung jawab merancang tampilan serta pengalaman pengguna pada website resmi acara. Desain difokuskan pada pembuatan antarmuka yang intuitif, menarik, dan mudah digunakan, sehingga memudahkan peserta dalam mengakses informasi mengenai berbagai rangkaian kegiatan seperti seminar, kompetisi, open lab, serta berbagai lomba terkait fisika.",
+    categories: ["UI/UX", "Website"],
     tech: ["Figma"],
     features: [
       "Perancangan antarmuka intuitif untuk memudahkan akses kompetisi",
@@ -111,6 +116,7 @@ export const projects = [
   {
     title: "Inventory Management System PT Deviota Jejaring Instrumen",
     description: "Berperan sebagai Front-End Developer dan UI/UX Designer dalam sebuah tim untuk merancang dan mengembangkan sistem manajemen inventaris (Inventory Management System/IMS) berbasis web di PT. Deviota Jejaring Instrumen. Sistem ini dikembangkan untuk membantu mahasiswa Institut Teknologi Bandung dalam mengelola proses peminjaman, pengambilan, dan pengembalian peralatan IoT di lingkungan laboratorium.",
+    categories: ["UI/UX", "Website"],
     tech: ["Laravel API", "Figma"],
     features: [
       "Perancangan UI/UX Dashboard yang intuitif untuk pemantauan ketersediaan modul dan sensor IoT secara real-time.",
@@ -132,6 +138,7 @@ export const projects = [
   {
     title: "SAKA (Sinergi Aplikasi Kolaborasi Aktif)",
     description: "Perancangan UI/UX solusi digital pembelajaran kolaboratif (Education 5.0) yang mengintegrasikan fitur Classroom dan Trello untuk siswa SMP/SMA.",
+    categories: ["UI/UX", "Mobile"],
     tech: ["Figma"],
     features: [
       "High-fidelity Prototype alur manajemen tugas berbasis AI",
@@ -154,6 +161,7 @@ export const projects = [
   {
     title: "UI/UX UPT Klinik Pratama UPI",
     description: "Proyek perancangan ulang UI/UX website layanan kesehatan Universitas Pendidikan Indonesia dengan menerapkan 7 prinsip desain Don Norman.",
+    categories: ["UI/UX", "Website"],
     tech: ["Figma"],
     features: [
       "Implementasi prinsip Discoverability & Signifiers pada alur pendaftaran",
@@ -172,4 +180,45 @@ export const projects = [
     ],
     figma: "https://www.figma.com/proto/klinik-upi-redesign" // Link prototype Figma Anda
   },
+  {
+    title: "Website Penyewaan Alat Camping Rent4u",
+    description: "Rent4u adalah aplikasi persewaan alat camping berbasis website yang memudahkan pengguna dalam mencari, memilih, dan menyewa perlengkapan outdoor secara daring.",
+    categories: ["Website"],
+    tech: ["Laravel", "MySQL"],
+    features: [
+      "Katalog perlengkapan camping dengan informasi detail produk",
+      "Fitur keranjang untuk mengelola penyewaan beberapa alat sekaligus",
+      "Sistem transaksi dengan unggah bukti pembayaran",
+      "Manajemen status penyewaan dan pengembalian barang",
+    ],
+    image: "/project/rent4u/1.png", // Sesuaikan dengan path aset Anda
+    images: [
+      "/project/rent4u/1.png",
+      "/project/rent4u/2.png",
+      "/project/rent4u/3.png",
+      "/project/rent4u/4.png",
+      "/project/rent4u/5.png",
+      "/project/rent4u/6.png",
+    ],
+    github: "https://github.com/fzbayu/rental-camping.git",
+  },
+  {
+    title: "Website Booking Gor Badminton H. Atang Ridho",
+    description: "Rent4u adalah aplikasi persewaan alat camping berbasis website yang memudahkan pengguna dalam mencari, memilih, dan menyewa perlengkapan outdoor secara daring.",
+    categories: ["Website"],
+    tech: ["Laravel", "MySQL"],
+    features: [
+      "Sistem booking lapangan badminton dengan jadwal yang terintegrasi",
+      "Voucher diskon untuk pelanggan",
+      "Fitur membership dengan keuntungan eksklusif",
+      "Paket fasilitas tambahan seperti sewa raket dan shuttlecock",
+    ],
+    image: "/project/bookinglapang/1.png", // Sesuaikan dengan path aset Anda
+    images: [
+      "/project/bookinglapang/1.png",
+      "/project/bookinglapang/2.png",
+    ],
+    github: "https://github.com/re4dam/sbd-tubes.git",
+  },
+
 ];
