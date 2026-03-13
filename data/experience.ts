@@ -3,6 +3,7 @@ export const experiences = [
     title: "Front-end Developer & UI/UX Designer",
     company: "Codifyve",
     period: "Ags 2025 - Sekarang",
+    instagram: "https://www.instagram.com/codifyve/",
     description: [
       "Membangun frontend aplikasi CBT menggunakan Next.js.",
       "Merancang UI/UX berbasis user-centered design dengan Figma.",

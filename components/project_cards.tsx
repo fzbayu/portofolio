@@ -27,7 +27,7 @@ export default function ProjectCard(props: Props) {
         className="group p-4 cursor-pointer hover:bg-gray-50 transition-all duration-300 border border-transparent hover:border-gray-100"
       >
         {/* IMAGE CONTAINER - 16:9 Aspect Ratio */}
-        <div className="relative w-full aspect-video mb-5 overflow-hidden bg-gray-100">
+        <div className="relative w-full aspect-video min-h-[200px] mb-5 overflow-hidden bg-gray-100">
           <Image
             src={image}
             alt={title}

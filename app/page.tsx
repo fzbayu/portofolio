@@ -26,8 +26,11 @@ import {
   ScrollProgress,
   type ScrollProgressDirection,
 } from '@/components/animate-ui/primitives/animate/scroll-progress';
+import { motion } from "motion/react";
 
 export default function Home() {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // UNTUK HAMBURGER MENU
 
   // STATE UNTUK UI TABS PROJEK
   const [activeTab, setActiveTab] = useState("All");
@@ -51,62 +54,29 @@ export default function Home() {
     <div className="fixed top-0 left-0 right-0 z-[999]">
       <ScrollProgress className="h-[3px] bg-orange-500" />
     </div>
-    <main>
+
+    <main className="pt-16">
 
       <div className="relative w-full min-h-screen overflow-hidden">
       {/* HERO */}
-      <section id="hero" className="sticky top-5 left-0 w-full h-screen bg-[var(--cream)] flex items-end justify-center z-0">
-        <div className="grid md:grid-cols-2 w-full max-w-7xl mx-auto">
+        <section id="hero" className="relative md:sticky w-full min-h-screen bg-[var(--cream)] flex items-end justify-center z-0">
+          <div className="grid md:grid-cols-2 w-full max-w-7xl mx-auto items-center gap-12">
+            <div className="relative flex items-end justify-center order-2 md:order-1">
+              <div className="absolute w-[280px] h-[280px] md:w-[550px] md:h-[550px] bg-orange-500 rounded-full -z-10"></div>
+              <img src="/profiles.png" alt="Profile" className="w-[250px] md:w-[400px] grayscale self-end" />
+            </div>
 
-          {/* FOTO */}
-          <div className="relative flex items-end justify-center">
-            <div className="absolute w-[550px] h-[550px] bg-orange-500 rounded-full -z-10 bottom-[-100px] left-1/2 -translate-x-1/2"></div>
-
-            <img
-              src="/profiles.png"
-              alt="Profile"
-              className="block w-[400px] grayscale self-end"
-            />
+            <div className="flex flex-col justify-center order-1 md:order-2 text-center md:text-left">
+              <h1 className="text-4xl md:text-7xl lg:text-8xl font-extrabold leading-[1] tracking-tight">
+                <TypeAnimation sequence={["HI!", 1000, "I'M FAIZ BAYU ERLANGGA", 5000]} speed={50} repeat={Infinity} />
+              </h1>
+              <p className="mt-4 text-lg md:text-xl">UI/UX Designer - Web Developer Enthusiast</p>
+              <button onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })} className="mt-8 px-6 py-3 border border-black rounded-full flex items-center gap-2 hover:bg-black hover:text-white transition mx-auto md:mx-0 w-fit group">
+                Scroll Down <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+              </button>
+            </div>
           </div>
-
-          {/* TEXT */}
-          <div className="flex flex-col justify-center">
-            <h1 className="text-6xl md:text-8xl font-extrabold leading-[0.9] tracking-tight">
-              <TypeAnimation
-                sequence={[
-                  "HI!",
-                  1000,
-                  "HI!, I'M FAIZ BAYU ERLANGGA",
-                  5000,
-                ]}
-                speed={50}
-                repeat={Infinity}
-              />
-            </h1>
-
-            <p className="mt-4 text-xl">
-              UI/UX Designer - Web Developer Enthusiast
-            </p>
-
-            <button 
-              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-              className="mt-8 px-6 py-3 border border-black rounded-full flex items-center gap-2 hover:bg-black hover:text-white transition w-fit group"
-            >
-              Scroll Down
-              {/* Ikon panah yang memantul */}
-              <svg 
-                className="w-4 h-4 animate-bounce group-hover:text-white" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-            </button>
-          </div>
-
-        </div>
-      </section>
+        </section>
 
       {/* ABOUT */}
       <section id="about" className="sticky top-0 bg-orange-500 text-white py-40 px-10">
@@ -129,7 +99,7 @@ export default function Home() {
         </div>
 
         {/* FOKUS DAN MINAT */}
-        <div id="focus-interest" className="grid md:grid-cols-2 w-full max-w-7xl mx-auto mt-15">
+        <div id="focus-interest" className="grid grid-cols-1 md:grid-cols-2 w-full max-w-7xl mx-auto mt-16 md:mt-24 gap-8 md:gap-12">
           <div className="flex flex-col justify-center">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-[0.9] tracking-tight">
               FOCUS<br />& INTEREST
@@ -137,7 +107,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-start">
-            <h1 className="text-2xl md:text-5xl font-extrabold leading-[0.9] tracking-tight text-transparent [-webkit-text-stroke:0.5px_white] transition-all duration-300 hover:text-white cursor-default">
+            <h1 className="text-5xl md:text-5xl font-extrabold leading-[0.9] tracking-tight text-transparent [-webkit-text-stroke:0.5px_white] transition-all duration-300 hover:text-white cursor-default">
               Web Application Dev
             </h1>
             <h1 className="mt-4 text-5xl md:text-5xl font-extrabold leading-[0.9] tracking-tight text-transparent [-webkit-text-stroke:0.5px_white] transition-all duration-300 hover:text-white cursor-default">
@@ -175,10 +145,10 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto tran">
-            {filteredProjects.map((project, i) => (
-              <ProjectCard key={i} {...project} />
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {filteredProjects.map((project, i) => (
+            <ProjectCard key={i} {...project} />
+          ))}
 
             {/* KARTU "9+" HANYA MUNCUL DI TAB "ALL" */}
             {activeTab === "All" && (
@@ -239,8 +209,18 @@ export default function Home() {
                   <h3 className="text-3xl font-black leading-tight mb-1">
                     {exp.title}
                   </h3>
-                  <p className="text-xl font-medium text-white/90 mb-4 italic">
+                  <p className="text-xl font-medium text-white/90 mb-4 italic flex items-center gap-2">
                     @ {exp.company}
+                    {exp.instagram && (
+                      <a
+                        href={exp.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white hover:text-orange-200 transition-colors duration-300"
+                      >
+                        <FaInstagram />
+                      </a>
+                    )}
                   </p>
                   <p className="text-sm font-light leading-relaxed text-white/80 text-justify">
                     {exp.description}
@@ -362,8 +342,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* QUOTE SECTION */}
+      <section className="relative py-32 bg-[var(--cream)] overflow-hidden">
+        {/* Ornamen Tanda Kutip Besar di Background */}
+        <span className="absolute top-0 left-10 text-[30rem] font-black text-black/5 leading-none select-none">
+          “
+        </span>
+
+        <div className="relative max-w-5xl mx-auto px-10 text-center z-10">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-6xl font-black leading-tight tracking-tighter text-black uppercase">
+              "Design is not just what it <span className="text-orange-500">looks like</span> and <span className="text-orange-500">feels like</span>. Design is how it <span className="border-b-4 border-black">works</span>."
+            </h2>
+            
+            <div className="mt-8 flex flex-col items-center">
+              <div className="w-12 h-1 bg-black mb-4"></div>
+              <p className="text-sm font-bold tracking-[0.3em] uppercase text-gray-400">
+                Steve Jobs
+              </p>
+            </div>
+          </motion.div>
+        </div>
+
+        <span className="absolute bottom-[-150px] right-10 text-[30rem] font-black text-black/5 leading-none select-none">
+          ”
+        </span>
+      </section>
+
       {/* FOOTER */}
-      <section id="footer" className="sticky top-0 py-20 px-10 text-center bg-[var(--cream)]">
+      <section id="footer" className="sticky top-0 px-10 text-center bg-[var(--cream)]">
         <section className="min-h-[50vh] flex items-center justify-center">
           <h1 className="text-[12vw] font-extrabold leading-[0.9] tracking-tight">
             <TypeAnimation

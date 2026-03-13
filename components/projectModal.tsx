@@ -71,7 +71,7 @@ export default function ProjectModal({ project, onClose }: Props) {
         </button>
 
         {/* IMAGE SECTION */}
-        <div className="relative w-full md:w-2/3 bg-[#F8F9FA] flex items-center justify-center overflow-hidden border-r border-gray-100">
+        <div className="relative w-full min-h-[280px] md:h-auto md:w-2/3 bg-[#F8F9FA] flex items-center justify-center overflow-hidden border-r border-gray-100">
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
               key={current}

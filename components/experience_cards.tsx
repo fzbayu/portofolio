@@ -1,6 +1,9 @@
+import { FaInstagram } from "react-icons/fa";
+
 type Props = {
   title: string;
   company: string;
+  instagram?: string;
   period: string;
   description: string[];
 };
@@ -8,6 +11,7 @@ type Props = {
 export default function ExperienceCard({
   title,
   company,
+  instagram,
   period,
   description,
 }: Props) {
@@ -24,6 +28,16 @@ export default function ExperienceCard({
                 <li key={i}>{item}</li>
             ))}
         </ul>
+        {instagram && (
+          <a
+            href={instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center mt-3 text-xl hover:text-orange-500 transition duration-300"
+          >
+            <FaInstagram />
+          </a>
+        )}
       </div>
     </div>
   );
