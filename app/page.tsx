@@ -59,8 +59,8 @@ export default function Home() {
 
       <div className="relative w-full min-h-screen overflow-hidden">
       {/* HERO */}
-        <section id="hero" className="relative md:sticky w-full min-h-screen bg-[var(--cream)] flex items-end justify-center z-0">
-          <div className="grid md:grid-cols-2 w-full max-w-7xl mx-auto items-center gap-12">
+        <section id="hero" className="relative md:sticky w-full min-h-screen bg-[var(--cream)] flex justify-center z-0 px-6">
+          <div className="grid md:grid-cols-2 w-full max-w-7xl mx-auto min-h-screen relative">
             <div className="relative flex items-end justify-center order-2 md:order-1">
               <div className="absolute w-[280px] h-[280px] md:w-[550px] md:h-[550px] bg-orange-500 rounded-full -z-10"></div>
               <img src="/profiles.png" alt="Profile" className="w-[250px] md:w-[400px] grayscale self-end" />
@@ -197,7 +197,7 @@ export default function Home() {
               Work <br /> Experience <br /> & Community
             </h1>
             {experiences.map((exp, index) => (
-              <div key={index} className="group relative pl-8 border-l border-white/30 last:border-0 last:pb-0">
+              <div key={index} className="group relative pl-6 border-l border-white/30 last:border-0 last:pb-0">
                 {/* TIMELINE DOT */}
                 <div className="absolute left-[-9px] top-0 w-4 h-4 bg-white rounded-full border-4 border-orange-500 group-hover:scale-150 transition-transform duration-300"></div>
                 
